@@ -22,8 +22,8 @@ import java.util.Set;
  * @author John L. Jegutanis
  */
 public enum CoinID {
-    BITCOIN_MAIN(BitcoinMain.get()),
-    BITCOIN_TEST(BitcoinTest.get()),
+    BITCOIN_MAIN(SuqaMain.get()),
+    BITCOIN_TEST(SuqaTest.get()),
     LITECOIN_MAIN(LitecoinMain.get()),
     LITECOIN_TEST(LitecoinTest.get()),
     DOGECOIN_MAIN(DogecoinMain.get()),

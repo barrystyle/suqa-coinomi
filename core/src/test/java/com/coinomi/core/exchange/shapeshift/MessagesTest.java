@@ -1,6 +1,6 @@
 package com.coinomi.core.exchange.shapeshift;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.DogecoinMain;
 import com.coinomi.core.coins.LitecoinMain;
@@ -30,7 +30,7 @@ import static org.junit.Assert.assertEquals;
  * @author John L. Jegutanis
  */
 public class MessagesTest {
-    final CoinType BTC = BitcoinMain.get();
+    final CoinType BTC = SuqaMain.get();
     final CoinType LTC = LitecoinMain.get();
     final CoinType DOGE = DogecoinMain.get();
     final CoinType NBT = NuBitsMain.get();
@@ -42,7 +42,7 @@ public class MessagesTest {
         JSONObject json = new JSONObject(
                 "{" +
                     "BTC: {" +
-                    "name: \"Bitcoin\"," +
+                    "name: \"Suqa\"," +
                     "symbol: \"BTC\"," +
                     "image: \"https://shapeshift.io/images/coins/bitcoin.png\"," +
                     "status: \"available\"" +
@@ -82,7 +82,7 @@ public class MessagesTest {
     public void testCoin() throws JSONException, ShapeShiftException {
         JSONObject json = new JSONObject(
                 "{" +
-                    "name: \"Bitcoin\"," +
+                    "name: \"Suqa\"," +
                     "symbol: \"BTC\"," +
                     "image: \"https://shapeshift.io/images/coins/bitcoin.png\"," +
                     "status: \"available\"" +
@@ -90,7 +90,7 @@ public class MessagesTest {
         ShapeShiftCoin coin = new ShapeShiftCoin(json);
         assertNotNull(coin);
         assertFalse(coin.isError);
-        assertEquals("Bitcoin", coin.name);
+        assertEquals("Suqa", coin.name);
         assertEquals("BTC", coin.symbol);
         assertEquals("https://shapeshift.io/images/coins/bitcoin.png", coin.image.toString());
         assertTrue(coin.isAvailable);
@@ -593,7 +593,7 @@ public class MessagesTest {
         JSONObject json = new JSONObject(
                 "{" +
                     "BTC: {" +
-                        "name: \"Bitcoin\"," +
+                        "name: \"Suqa\"," +
                         "symbol: \"BTC\"," +
                         "image: \"https://shapeshift.io/images/coins/bitcoin.png\"," +
                         "status: \"available\"" +

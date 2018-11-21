@@ -1,6 +1,6 @@
 package com.coinomi.core.exchange.shapeshift;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.DogecoinMain;
 import com.coinomi.core.coins.LitecoinMain;
@@ -41,7 +41,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class ServerTest {
 
-    final CoinType BTC = BitcoinMain.get();
+    final CoinType BTC = SuqaMain.get();
     final CoinType LTC = LitecoinMain.get();
     final CoinType DOGE = DogecoinMain.get();
     final CoinType NBT = NuBitsMain.get();
@@ -365,7 +365,7 @@ public class ServerTest {
     public void testFixedAmountTransactionFail()
             throws ShapeShiftException, AddressMalformedException, IOException {
         server.enqueue(new MockResponse().setBody(FIXED_AMOUNT_TRANSACTION_JSON));
-        // We withdraw Dogecoins to a Bitcoin address
+        // We withdraw Dogecoins to a Suqa address
         shapeShift.exchangeForAmount(DOGE.value("1000"),
                 BTC.newAddress("18ETaXCYhJ8sxurh41vpKC3E6Tu7oJ94q8"),
                 BTC.newAddress("1Nz4xHJjNCnZFPjRUq8CN4BZEXTgLZfeUW"));
@@ -394,7 +394,7 @@ public class ServerTest {
     public static final String GET_COINS_JSON =
             "{" +
             "BTC: {" +
-            "name: \"Bitcoin\"," +
+            "name: \"Suqa\"," +
             "symbol: \"BTC\"," +
             "image: \"https://shapeshift.io/images/coins/bitcoin.png\"," +
             "status: \"available\"" +

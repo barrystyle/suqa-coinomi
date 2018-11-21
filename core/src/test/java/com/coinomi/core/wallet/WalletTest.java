@@ -1,6 +1,6 @@
 package com.coinomi.core.wallet;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.DogecoinMain;
 import com.coinomi.core.coins.DogecoinTest;
@@ -41,7 +41,7 @@ public class WalletTest {
 
         wallet = new Wallet(MNEMONIC);
 
-        ImmutableList<CoinType> typesToCreate = ImmutableList.of(BitcoinMain.get(),
+        ImmutableList<CoinType> typesToCreate = ImmutableList.of(SuqaMain.get(),
                 LitecoinMain.get(), DogecoinMain.get());
         wallet.createAccounts(typesToCreate, true, aesKey);
     }

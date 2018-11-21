@@ -1,7 +1,7 @@
 package com.coinomi.core.uri;
 
 /**
- * <p>This exception occurs when an optional field is detected (under the Bitcoin URI scheme) and fails
+ * <p>This exception occurs when an optional field is detected (under the Suqa URI scheme) and fails
  * to pass the associated test (such as {@code amount} not being a valid number).</p>
  *
  * @since 0.3.0

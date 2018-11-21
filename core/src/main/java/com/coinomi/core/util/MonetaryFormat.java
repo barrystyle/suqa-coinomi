@@ -61,11 +61,11 @@ public final class MonetaryFormat implements Serializable {
     public static final MonetaryFormat UBTC = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(2);
     /** Standard format for fiat amounts. */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
-    /** Currency code for base 1 Bitcoin. */
+    /** Currency code for base 1 Suqa. */
     public static final String CODE_BTC = "BTC";
-    /** Currency code for base 1/1000 Bitcoin. */
+    /** Currency code for base 1/1000 Suqa. */
     public static final String CODE_MBTC = "mBTC";
-    /** Currency code for base 1/1000000 Bitcoin. */
+    /** Currency code for base 1/1000000 Suqa. */
     public static final String CODE_UBTC = "µBTC";
 
     private final char negativeSign;
@@ -80,7 +80,7 @@ public final class MonetaryFormat implements Serializable {
     private final char codeSeparator;
     private final boolean codePrefixed;
 
-    private static final String DECIMALS_PADDING = "0000000000000000"; // a few more than necessary for Bitcoin
+    private static final String DECIMALS_PADDING = "0000000000000000"; // a few more than necessary for Suqa
 
     /**
      * Set character to prefix negative values.

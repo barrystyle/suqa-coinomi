@@ -5,8 +5,8 @@ import android.text.format.DateUtils;
 import com.coinomi.core.coins.AsiacoinMain;
 import com.coinomi.core.coins.AuroracoinMain;
 import com.coinomi.core.coins.BatacoinMain;
-import com.coinomi.core.coins.BitcoinMain;
-import com.coinomi.core.coins.BitcoinTest;
+import com.coinomi.core.coins.SuqaMain;
+import com.coinomi.core.coins.SuqaTest;
 import com.coinomi.core.coins.BlackcoinMain;
 import com.coinomi.core.coins.BurstMain;
 import com.coinomi.core.coins.CanadaeCoinMain;
@@ -128,9 +128,9 @@ public class Constants {
 
     // TODO move to resource files
     public static final List<CoinAddress> DEFAULT_COINS_SERVERS = ImmutableList.of(
-            new CoinAddress(BitcoinMain.get(),      new ServerAddress("btc-cce-1.coinomi.net", 5001),
+            new CoinAddress(SuqaMain.get(),      new ServerAddress("btc-cce-1.coinomi.net", 5001),
                                                     new ServerAddress("btc-cce-2.coinomi.net", 5001)),
-            new CoinAddress(BitcoinTest.get(),      new ServerAddress("btc-testnet-cce-1.coinomi.net", 15001),
+            new CoinAddress(SuqaTest.get(),      new ServerAddress("btc-testnet-cce-1.coinomi.net", 15001),
                                                     new ServerAddress("btc-testnet-cce-2.coinomi.net", 15001)),
             new CoinAddress(DogecoinMain.get(),     new ServerAddress("doge-cce-1.coinomi.net", 5003),
                                                     new ServerAddress("doge-cce-2.coinomi.net", 5003)),
@@ -308,16 +308,16 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.IXCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/ixc/tx.dws?%s");
     }
 
-    public static final CoinType DEFAULT_COIN = BitcoinMain.get();
-    public static final List<CoinType> DEFAULT_COINS = ImmutableList.of((CoinType) BitcoinMain.get());
+    public static final CoinType DEFAULT_COIN = SuqaMain.get();
+    public static final List<CoinType> DEFAULT_COINS = ImmutableList.of((CoinType) SuqaMain.get());
     public static final ArrayList<String> DEFAULT_TEST_COIN_IDS = Lists.newArrayList(
-            BitcoinTest.get().getId(),
+            SuqaTest.get().getId(),
             LitecoinTest.get().getId(),
             DogecoinTest.get().getId()
     );
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
-            BitcoinMain.get(),
+            SuqaMain.get(),
             AsiacoinMain.get(),
             AuroracoinMain.get(),
             BatacoinMain.get(),
@@ -356,7 +356,7 @@ public class Constants {
             VergeMain.get(),
             VertcoinMain.get(),
             VpncoinMain.get(),
-            BitcoinTest.get(),
+            SuqaTest.get(),
             LitecoinTest.get(),
             DogecoinTest.get()
     );

@@ -87,7 +87,7 @@
     <string name="restore_error">復元フレーズの検証に失敗しました。%1$s</string>
     <string name="extra_entropy">追加のエントロピー</string>
     <!-- Wallet activity -->
-    <string name="test_wallet_message">これはテストウォレットです。テストネットのBitcoin、Litecoin、Dogecoinを送ったり受け取ったりできます。\n\n本物のおかねを扱うことのできるウォレットを使いたい場合には、<b>設定 &gt; ウォレットを復旧する &gt; 新しいウォレットを作成する</b>を選択してください。</string>
+    <string name="test_wallet_message">これはテストウォレットです。テストネットのSuqa、Litecoin、Dogecoinを送ったり受け取ったりできます。\n\n本物のおかねを扱うことのできるウォレットを使いたい場合には、<b>設定 &gt; ウォレットを復旧する &gt; 新しいウォレットを作成する</b>を選択してください。</string>
     <string name="wallet_update_title">新しいバージョンが利用可能です。</string>
     <string name="wallet_update_message">新しいバージョンのCoinomiが利用可能です。これには新しい機能やバグ修正が含まれます。</string>
     <string name="pay_with">次のもので送金する：</string>
@@ -174,7 +174,7 @@
     <string name="about_licence">オープンソース・プロジェクト\nhttps://github.com/Coinomi/coinomi-android\nソースコードはGNU General Public License 3のもとでライセンスされています</string>
     <string name="about_credits_nubits">サーバのインフラはNuBits - 世界初の安定したデジタル通貨 - の寄付により成り立っています\nhttps://nubits.com/</string>
     <string name="about_credits_translations">翻訳提供者:</string>
-    <string name="about_credits_bitcoinj">Bitcoinjライブラリを使用しています\nhttp://bitcoinj.github.io/</string>
+    <string name="about_credits_bitcoinj">Suqajライブラリを使用しています\nhttp://bitcoinj.github.io/</string>
     <string name="about_credits_electrum">Electrumのサーバソフトウェアを使用しています\nhttps://electrum.org/</string>
     <string name="about_credits_schildbach">Andreas Schildbach氏の影響を受けています\nhttps://github.com/schildbach/bitcoin-wallet/</string>
     <string name="about_credits_zxing">QRコードの機能はZXing氏によるものです\nhttps://github.com/zxing/zxing</string>
@@ -275,7 +275,7 @@
     <string name="exchange_history_empty">両替は一度も行っていません</string>
     <!-- ShapeShift -->
     <string name="about_shapeshift_title">ShapeShift.ioについて</string>
-    <string name="about_shapeshift_message">ShapeShift.ioは、Bitcoinとオルトコインの変換サービスを提供する、即時オルトコイン両替所です。Bitcoinの生態系の中で、Bitcoinと数多のオルトコインの変換を行う、最も高速で、最も効率的なプラットフォーム（ウェブおよびAPI経由で利用可能）の代表格です。アカウントの作成は必要ありません。</string>
+    <string name="about_shapeshift_message">ShapeShift.ioは、Suqaとオルトコインの変換サービスを提供する、即時オルトコイン両替所です。Suqaの生態系の中で、Suqaと数多のオルトコインの変換を行う、最も高速で、最も効率的なプラットフォーム（ウェブおよびAPI経由で利用可能）の代表格です。アカウントの作成は必要ありません。</string>
     <!-- Sign Message -->
     <string name="title_activity_sign_verify_message">メッセージの署名と検証</string>
     <string name="signing_info">アドレスを使用することでメッセージの署名や検証ができます。</string>

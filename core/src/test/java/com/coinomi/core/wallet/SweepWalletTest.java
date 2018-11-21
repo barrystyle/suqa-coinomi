@@ -1,6 +1,6 @@
 package com.coinomi.core.wallet;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.DogecoinMain;
 
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertTrue;
  * @author John L. Jegutanis
  */
 public class SweepWalletTest {
-    static final CoinType BTC = BitcoinMain.get();
+    static final CoinType BTC = SuqaMain.get();
     static final CoinType DOGE = DogecoinMain.get();
     static final String BTC_WIF_ADDR = "15uucyG2PdLRpYU1UDNucMzxm56UbVv2YG";
     static final String BTC_WIF_PRIV = "5KT6EseSW2NxYDw66aPsqvyv6cKunUSNHUVkTtxyaiGspb3XJVz";

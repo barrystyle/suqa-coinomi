@@ -103,7 +103,7 @@
     <string name="restore_error">Could not verify your recovery phrase. %1$s</string>
     <string name="extra_entropy">Extra entropy</string>
     <!-- Wallet activity -->
-    <string name="test_wallet_message">This is a test wallet, where you can send and receive testnet Bitcoins, Litecoin and Dogecoins.\n\nIf you want to use the wallet with real money please go to: <b>Settings &gt; Restore wallet &gt; Create a new wallet</b>.</string>
+    <string name="test_wallet_message">This is a test wallet, where you can send and receive testnet Suqas, Litecoin and Dogecoins.\n\nIf you want to use the wallet with real money please go to: <b>Settings &gt; Restore wallet &gt; Create a new wallet</b>.</string>
     <string name="wallet_update_title">New version available</string>
     <string name="wallet_update_message">A new version of Coinomi is available, it contains new features and fixes.</string>
     <string name="pay_with">Send with</string>
@@ -133,7 +133,7 @@
     <!-- Send fragment -->
     <string name="send_coins_fragment_receiving_address_label">Pay to</string>
     <string name="send_coins_fragment_receiving_address_tip">name or address</string>
-    <string name="send_coins_fragment_receiving_address_error">Invalid Bitcoin Address!</string>
+    <string name="send_coins_fragment_receiving_address_error">Invalid Suqa Address!</string>
     <string name="send_coins_fragment_amount_label">Amount to pay</string>
     <string name="send_coins_fragment_button_send">Send</string>
     <string name="send_coins_fragment_button_back">Back</string>
@@ -173,7 +173,7 @@
     <!-- FinalizeWalletRestorationFragment -->
     <string name="wallet_restoration">Please wait while your wallet is being restored</string>
     <string name="wallet_restoration_master_key">Creating master key</string>
-    <!-- The %1$s is a coin name e.g. Creating key for Bitcoin -->
+    <!-- The %1$s is a coin name e.g. Creating key for Suqa -->
     <string name="wallet_restoration_coin">Creating key for %1$s</string>
     <!-- The %1$s is an error message -->
     <string name="wallet_restoration_error">Could not restore your wallet.\n\n%1$s</string>
@@ -207,7 +207,7 @@
     <string name="about_credits_nubits">Server infrastructure donated by NuBits - The World\'s First Stable Digital Currency\nhttps://nubits.com/</string>
     <string name="about_credits_translations">Translations provided by:</string>
     <string name="about_credits_translations_credits" translatable="false">Tamara Castellano (Italian)\nJorge Nicolas Karmis (Spanish)\nGeorge Kimionis (Greek)\n@visvirial (Japanese)\nДенис Рейн (Russian, Ukrainian)</string>
-    <string name="about_credits_bitcoinj">Uses Bitcoinj library\nhttp://bitcoinj.github.io/</string>
+    <string name="about_credits_bitcoinj">Uses Suqaj library\nhttp://bitcoinj.github.io/</string>
     <string name="about_credits_electrum">Uses Electrum server software\nhttps://electrum.org/</string>
     <string name="about_credits_schildbach">Influenced by Andreas Schildbach\nhttps://github.com/schildbach/bitcoin-wallet/</string>
     <string name="about_credits_zxing">QR-code functionality by ZXing\nhttps://github.com/zxing/zxing</string>
@@ -217,15 +217,15 @@
     <string name="about_coinomi_copyright" translatable="false">\u00A9 2014–2016 Coinomi</string>
     <!-- Add Coins -->
     <string name="title_activity_add_coins">Add coins</string>
-    <!-- %1$s is the coin name e.g. ... create a Bitcoin account ... -->
+    <!-- %1$s is the coin name e.g. ... create a Suqa account ... -->
     <string name="password_add_coin">You are about to create a %1$s account in your wallet.</string>
-    <!-- %1$s is the coin name e.g. Add Bitcoin? -->
+    <!-- %1$s is the coin name e.g. Add Suqa? -->
     <string name="adding_coin_confirmation_title">Add %1$s?</string>
-    <!-- %1$s is the coin name e.g. ... a new Bitcoin account -->
+    <!-- %1$s is the coin name e.g. ... a new Suqa account -->
     <string name="adding_coin_working">Please wait while creating a new %1$s account</string>
-    <!-- %1$s is the coin name and %2$s is and error message e.g. Error adding Bitcoin: some error message -->
+    <!-- %1$s is the coin name and %2$s is and error message e.g. Error adding Suqa: some error message -->
     <string name="add_coin_error">Error adding %1$s: %2$s</string>
-    <!-- %1$s is the coin name e.g. Bitcoin already added -->
+    <!-- %1$s is the coin name e.g. Suqa already added -->
     <string name="coin_already_added_title">%1$s already added</string>
     <string name="coin_already_added">Additional accounts are not yet supported</string>
     <!-- Transaction amount visualizer -->
@@ -268,7 +268,7 @@
     <!-- Edit Account -->
     <string name="edit_account_title">Edit account</string>
     <string name="edit_account_description_label">Description</string>
-    <!-- %1$s is the name of the account e.g. Remove account Bitcoin? -->
+    <!-- %1$s is the name of the account e.g. Remove account Suqa? -->
     <string name="edit_account_delete_title">Remove account %1$s?</string>
     <string name="edit_account_delete_description">This removes the account from the wallet but it is still possible to re-add it and recover the coins.</string>
     <!-- Settings -->
@@ -336,7 +336,7 @@
     <string name="exchange_history_empty">No exchanges made</string>
     <!-- ShapeShift -->
     <string name="about_shapeshift_title">About ShapeShift.io</string>
-    <string name="about_shapeshift_message">ShapeShift.io is an instant altcoin exchange that provides Bitcoin and altcoin conversion. The platform (available in both web and API flavors) represents the fastest, most efficient way to convert between Bitcoin and dozens of altcoins within the Bitcoin ecosystem. No account needed.</string>
+    <string name="about_shapeshift_message">ShapeShift.io is an instant altcoin exchange that provides Suqa and altcoin conversion. The platform (available in both web and API flavors) represents the fastest, most efficient way to convert between Suqa and dozens of altcoins within the Suqa ecosystem. No account needed.</string>
     <!-- Sign Message -->
     <string name="title_activity_sign_verify_message">Sign/verify message</string>
     <string name="signing_info">You can sign or verify a message using an address.</string>
@@ -388,7 +388,7 @@
     <string name="sweep_wallet_key_signing">Creating transaction&#8230;</string>
     <!-- Fees settings -->
     <string name="title_activity_transaction_fees">Transaction fees</string>
-    <!-- Example: Bitcoin transaction fees-->
+    <!-- Example: Suqa transaction fees-->
     <string name="tx_fees_title">%1$s transaction fees</string>
     <!-- Example: The fee value is per kilobyte.-->
     <string name="tx_fees_description">The fee value is %1$s.</string>

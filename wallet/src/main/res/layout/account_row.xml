@@ -34,7 +34,7 @@
             style="@style/NormalText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Bitcoin" />
+            tools:text="Suqa" />
 
         <LinearLayout
             android:layout_width="wrap_content"

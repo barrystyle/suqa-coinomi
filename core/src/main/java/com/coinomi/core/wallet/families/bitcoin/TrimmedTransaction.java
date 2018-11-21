@@ -130,7 +130,7 @@ public class TrimmedTransaction extends Transaction {
     }
 
     @Override
-    public byte[] unsafeBitcoinSerialize() {
+    public byte[] unsafeSuqaSerialize() {
         throw new IllegalArgumentException("Cannot serialize trimmed transaction");
     }
 

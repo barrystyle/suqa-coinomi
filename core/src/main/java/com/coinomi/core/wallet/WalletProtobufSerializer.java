@@ -93,7 +93,7 @@ public class WalletProtobufSerializer {
                 KeyCrypterScrypt keyCrypterScrypt = (KeyCrypterScrypt) keyCrypter;
                 walletBuilder.setEncryptionType(Protos.Wallet.EncryptionType.ENCRYPTED_SCRYPT_AES);
 
-                // Bitcoinj format to our native protobuf
+                // Suqaj format to our native protobuf
                 Protos.ScryptParameters.Builder encParamBuilder = Protos.ScryptParameters.newBuilder();
                 encParamBuilder.setSalt(keyCrypterScrypt.getScryptParameters().getSalt());
                 encParamBuilder.setR(keyCrypterScrypt.getScryptParameters().getR());

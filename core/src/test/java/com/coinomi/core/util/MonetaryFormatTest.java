@@ -17,7 +17,7 @@ package com.coinomi.core.util;
  * limitations under the License.
  */
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.FiatValue;
 import com.coinomi.core.coins.Value;
 import com.coinomi.core.coins.ValueType;
@@ -252,7 +252,7 @@ public class MonetaryFormatTest {
 
     @Test
     public void parse() throws Exception {
-        ValueType type = BitcoinMain.get();
+        ValueType type = SuqaMain.get();
         Value coin = type.oneCoin();
         Value cent = coin.divide(100);
         Value millicoin = coin.divide(1000);
@@ -289,52 +289,52 @@ public class MonetaryFormatTest {
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidEmpty() throws Exception {
-        NO_CODE.parse(BitcoinMain.get(), "");
+        NO_CODE.parse(SuqaMain.get(), "");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidWhitespaceBefore() throws Exception {
-        NO_CODE.parse(BitcoinMain.get(), " 1");
+        NO_CODE.parse(SuqaMain.get(), " 1");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidWhitespaceSign() throws Exception {
-        NO_CODE.parse(BitcoinMain.get(), "- 1");
+        NO_CODE.parse(SuqaMain.get(), "- 1");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidWhitespaceAfter() throws Exception {
-        NO_CODE.parse(BitcoinMain.get(), "1 ");
+        NO_CODE.parse(SuqaMain.get(), "1 ");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidMultipleDecimalMarks() throws Exception {
-        NO_CODE.parse(BitcoinMain.get(), "1.0.0");
+        NO_CODE.parse(SuqaMain.get(), "1.0.0");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidDecimalMark() throws Exception {
-        NO_CODE.decimalMark(',').parse(BitcoinMain.get(), "1.0");
+        NO_CODE.decimalMark(',').parse(SuqaMain.get(), "1.0");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidPositiveSign() throws Exception {
-        NO_CODE.positiveSign('@').parse(BitcoinMain.get(), "+1.0");
+        NO_CODE.positiveSign('@').parse(SuqaMain.get(), "+1.0");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidNegativeSign() throws Exception {
-        NO_CODE.negativeSign('@').parse(BitcoinMain.get(), "-1.0");
+        NO_CODE.negativeSign('@').parse(SuqaMain.get(), "-1.0");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidHugeNumber() throws Exception {
-        NO_CODE.parse(BitcoinMain.get(), "99999999999999999999");
+        NO_CODE.parse(SuqaMain.get(), "99999999999999999999");
     }
 
     @Test(expected = NumberFormatException.class)
     public void parseInvalidHugeNegativeNumber() throws Exception {
-        NO_CODE.parse(BitcoinMain.get(), "-99999999999999999999");
+        NO_CODE.parse(SuqaMain.get(), "-99999999999999999999");
     }
 
     private static final Value ONE_EURO = FiatValue.parse("EUR", "1");

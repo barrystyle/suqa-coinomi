@@ -56,7 +56,7 @@ public class BitSendRequest extends SendRequest<BitTransaction> {
     }
 
     private static void checkTypeCompatibility(CoinType type) {
-        // Only Bitcoin family coins are supported
+        // Only Suqa family coins are supported
         if (!(type instanceof BitFamily)) {
             throw new RuntimeException("Unsupported type: " + type);
         }

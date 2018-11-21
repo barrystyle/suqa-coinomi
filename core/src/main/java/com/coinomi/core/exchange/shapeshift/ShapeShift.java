@@ -262,7 +262,7 @@ public class ShapeShift extends Connection {
 
 
     /**
-     * Convert types to the ShapeShift format. For example Bitcoin to Litecoin will become btc_ltc.
+     * Convert types to the ShapeShift format. For example Suqa to Litecoin will become btc_ltc.
      */
     public static String getPair(CoinType typeFrom, CoinType typeTo) {
         return typeFrom.getSymbol().toLowerCase() + "_" + typeTo.getSymbol().toLowerCase();

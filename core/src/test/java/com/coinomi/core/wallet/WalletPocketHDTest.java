@@ -1,6 +1,6 @@
 package com.coinomi.core.wallet;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.DogecoinTest;
 import com.coinomi.core.coins.NuBitsMain;
@@ -69,7 +69,7 @@ import static org.junit.Assert.assertTrue;
  * @author John L. Jegutanis
  */
 public class WalletPocketHDTest {
-    static final CoinType BTC = BitcoinMain.get();
+    static final CoinType BTC = SuqaMain.get();
     static final CoinType DOGE = DogecoinTest.get();
     static final CoinType NBT = NuBitsMain.get();
     static final CoinType VPN = VpncoinMain.get();

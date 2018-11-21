@@ -17,7 +17,7 @@ package com.coinomi.core.util;
  * limitations under the License.
  */
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.FiatType;
 import com.coinomi.core.coins.FiatValue;
@@ -32,7 +32,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class ExchangeRateTest {
-    final CoinType BTC = BitcoinMain.get();
+    final CoinType BTC = SuqaMain.get();
     final CoinType LTC = LitecoinMain.get();
     final CoinType NBT = NuBitsMain.get();
     final Value oneBtc = BTC.oneCoin();

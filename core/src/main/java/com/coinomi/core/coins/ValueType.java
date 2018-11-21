@@ -17,7 +17,7 @@ public interface ValueType extends Serializable {
     int getUnitExponent();
 
     /**
-     * Typical 1 coin value, like 1 Bitcoin, 1 Peercoin or 1 Dollar
+     * Typical 1 coin value, like 1 Suqa, 1 Peercoin or 1 Dollar
      */
     Value oneCoin();
 

@@ -87,7 +87,7 @@
     <string name="restore_error">Не удалось проверить Вашу восстанавливающую фразу. %1$s</string>
     <string name="extra_entropy">Усиленная энтропия</string>
     <!-- Wallet activity -->
-    <string name="test_wallet_message">Это тестовый кошелек, где Вы можете отправлять и получать Bitcoin, Litecoin, Dogecoin используя testnet.\n\nЕсли Вы хотите использовать кошелёк с настоящими деньгами, пожалуйста зайдите в: <b>Настройки &gt; Восстановить кошелёк &gt; Создать новый кошелёк</b>.</string>
+    <string name="test_wallet_message">Это тестовый кошелек, где Вы можете отправлять и получать Suqa, Litecoin, Dogecoin используя testnet.\n\nЕсли Вы хотите использовать кошелёк с настоящими деньгами, пожалуйста зайдите в: <b>Настройки &gt; Восстановить кошелёк &gt; Создать новый кошелёк</b>.</string>
     <string name="wallet_update_title">Доступна новая версия</string>
     <string name="wallet_update_message">Доступна новая версия Coinomi, она содержит новые функции и исправления.</string>
     <string name="pay_with">Отправить используя</string>
@@ -115,7 +115,7 @@
     <!-- Send fragment -->
     <string name="send_coins_fragment_receiving_address_label">Оплатить</string>
     <string name="send_coins_fragment_receiving_address_tip">введите имя или адрес</string>
-    <string name="send_coins_fragment_receiving_address_error">Неверный Bitcoin Адрес!</string>
+    <string name="send_coins_fragment_receiving_address_error">Неверный Suqa Адрес!</string>
     <string name="send_coins_fragment_amount_label">Сумма оплаты</string>
     <string name="send_coins_fragment_button_send">Отправить</string>
     <string name="send_coins_fragment_button_back">Назад</string>
@@ -180,7 +180,7 @@
     <string name="about_licence">Программа с открытым исходным кодом\nhttps://github.com/Coinomi/coinomi-android\nИсходный код открыт на основе лицензии GNU General Public License 3</string>
     <string name="about_credits_nubits">Инфраструктура серверов предоставлена NuBits - Первой Всемирной Стабильной Цифровой Валютой \nhttps://nubits.com/</string>
     <string name="about_credits_translations">Переводы выполнили:</string>
-    <string name="about_credits_bitcoinj">Используется библиотека Bitcoinj\nhttp://bitcoinj.github.io/</string>
+    <string name="about_credits_bitcoinj">Используется библиотека Suqaj\nhttp://bitcoinj.github.io/</string>
     <string name="about_credits_electrum">Используется серверное ПО от Electrum\nhttps://electrum.org/</string>
     <string name="about_credits_schildbach">Под влиянием работы Andreas Schildbach\nhttps://github.com/schildbach/bitcoin-wallet/</string>
     <string name="about_credits_zxing">QR-код сканер от ZXing\nhttps://github.com/zxing/zxing</string>
@@ -284,7 +284,7 @@
     <string name="exchange_history_empty">Обмен валюты еще не производился</string>
     <!-- ShapeShift -->
     <string name="about_shapeshift_title">О ShapeShift.io</string>
-    <string name="about_shapeshift_message">ShapeShift.io это сервис, обеспечивающий  моментальный обмен между Bitcoin и другими криптовалютами. Платформа (доступна в браузерной и API версиях) предоставляет самый быстрый и эффективный метод обмена между Bitcoin и множеством альтернативных криптовалют. Аккаунт не требуется.</string>
+    <string name="about_shapeshift_message">ShapeShift.io это сервис, обеспечивающий  моментальный обмен между Suqa и другими криптовалютами. Платформа (доступна в браузерной и API версиях) предоставляет самый быстрый и эффективный метод обмена между Suqa и множеством альтернативных криптовалют. Аккаунт не требуется.</string>
     <!-- Sign Message -->
     <string name="title_activity_sign_verify_message">Подписать/проверить сообщение</string>
     <string name="signing_info">Вы можете подписать или проверить сообщение используя адрес.</string>

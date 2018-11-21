@@ -87,7 +87,7 @@
     <string name="restore_error">Η φράση ανάκτησής σας δεν μπόρεσε να επαληθευτεί. %1$s</string>
     <string name="extra_entropy">Ενισχυμένη εντροπία</string>
     <!-- Wallet activity -->
-    <string name="test_wallet_message">Το παρόν είναι ένα δοκιμαστικό πορτοφόλι, όπου μπορείτε να στείλετε και παραλάβετε δοκιμαστικά νομίσματα Bitcoin, Litecoin, Dogecoin κ.ά.\n\nΑν επιθυμείτε να χρησιμοποιήσετε το πορτοφόλι με αληθινά χρήματα παρακαλώ επιλέξτε: <b>Ρυθμίσεις &gt; Ανάκτηση πορτοφολιού &gt; Δημιουργία νέου πορτοφολιού</b>.</string>
+    <string name="test_wallet_message">Το παρόν είναι ένα δοκιμαστικό πορτοφόλι, όπου μπορείτε να στείλετε και παραλάβετε δοκιμαστικά νομίσματα Suqa, Litecoin, Dogecoin κ.ά.\n\nΑν επιθυμείτε να χρησιμοποιήσετε το πορτοφόλι με αληθινά χρήματα παρακαλώ επιλέξτε: <b>Ρυθμίσεις &gt; Ανάκτηση πορτοφολιού &gt; Δημιουργία νέου πορτοφολιού</b>.</string>
     <string name="wallet_update_title">Νέα έκδοση διαθέσιμη</string>
     <string name="wallet_update_message">Μια νέα έκδοση του Coinomi η οποία εμπεριέχει νέες δυνατότητες και τυχόν διορθώσεις αδυναμιών είναι διαθέσιμη.</string>
     <string name="pay_with">Αποστολή με</string>
@@ -177,7 +177,7 @@
     <string name="about_licence">Ένα πρόγραμμα ανοιχτού λογισμικού\nhttps://github.com/Coinomi/coinomi-android\nΟ πηγαίος κώδικας διατίθεται βάσει της άδειας GNU General Public License 3</string>
     <string name="about_credits_nubits">Οι κεντρικοί εξυπηρετητές είναι μια προσφορά της NuBits\nhttps://nubits.com/</string>
     <string name="about_credits_translations">Μεταφράσεις από τους:</string>
-    <string name="about_credits_bitcoinj">Χρησιμοποιείται η βιβλιοθήκη Bitcoinj\nhttp://bitcoinj.github.io/</string>
+    <string name="about_credits_bitcoinj">Χρησιμοποιείται η βιβλιοθήκη Suqaj\nhttp://bitcoinj.github.io/</string>
     <string name="about_credits_electrum">Χρησιμοποιείται λογισμικό του εξυπηρετητή Electrum\nhttps://electrum.org/</string>
     <string name="about_credits_schildbach">Επηρεασμένο από τη δουλειά του Andreas Schildbach \nhttps://github.com/schildbach/bitcoin-wallet/</string>
     <string name="about_credits_zxing">Λειτουργία QR-code από τον ZXing\nhttps://github.com/zxing/zxing</string>
@@ -279,7 +279,7 @@
     <string name="exchange_history_empty">Δεν έχουν πραγματοποιηθεί μετατροπές νομισμάτων</string>
     <!-- ShapeShift -->
     <string name="about_shapeshift_title">Σχετικά με την ShapeShift.io</string>
-    <string name="about_shapeshift_message">Η ShapeShift.io είναι ένα ανταλλακτήριο στιγμιαίας μετατροπής Bitcoin και άλλων νομισμάτων. Η πλατφόρμα (διαθέσιμη μέσω της ιστοσελίδας και του API) αντιπροσωπεύει τον πιο γρήγορο και αποδοτικό τρόπο για να μετατρέψετε μεταξύ Bitcoin και δεκάδων άλλων νομισμάτων. Δεν απαιτείται δημιουργία λογαριασμού.</string>
+    <string name="about_shapeshift_message">Η ShapeShift.io είναι ένα ανταλλακτήριο στιγμιαίας μετατροπής Suqa και άλλων νομισμάτων. Η πλατφόρμα (διαθέσιμη μέσω της ιστοσελίδας και του API) αντιπροσωπεύει τον πιο γρήγορο και αποδοτικό τρόπο για να μετατρέψετε μεταξύ Suqa και δεκάδων άλλων νομισμάτων. Δεν απαιτείται δημιουργία λογαριασμού.</string>
     <!-- Sign Message -->
     <string name="title_activity_sign_verify_message">Υπογραφή/επαλήθευση μηνύματος</string>
     <string name="signing_info">Μπορείτε να υπογράψετε ή να επαληθεύσετε ένα μήνυμα χρησιμοποιώντας μία διεύθυνση</string>

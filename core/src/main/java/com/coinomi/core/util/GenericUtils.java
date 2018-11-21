@@ -224,7 +224,7 @@ public class GenericUtils {
      */
     public static List<CoinType> getPossibleTypes(String addressStr) throws AddressMalformedException {
         ImmutableList.Builder<CoinType> builder = ImmutableList.builder();
-        tryBitcoinFamilyAddresses(addressStr, builder);
+        trySuqaFamilyAddresses(addressStr, builder);
         // TODO try other coin addresses
         List<CoinType> possibleTypes = builder.build();
         if (possibleTypes.size() == 0) {
@@ -234,11 +234,11 @@ public class GenericUtils {
     }
 
     /**
-     * Tries to parse the addressStr as a Bitcoin style address and find potential compatible coin types
+     * Tries to parse the addressStr as a Suqa style address and find potential compatible coin types
      * @param addressStr possible bitcoin type address
      * @param builder for the types list
      */
-    private static void tryBitcoinFamilyAddresses(final String addressStr, ImmutableList.Builder<CoinType> builder) {
+    private static void trySuqaFamilyAddresses(final String addressStr, ImmutableList.Builder<CoinType> builder) {
         VersionedChecksummedBytes parsed;
         try {
             parsed = new VersionedChecksummedBytes(addressStr) { };

@@ -37,7 +37,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinID;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.Value;
@@ -99,7 +99,7 @@ public final class ExchangeRatesFragment extends ListFragment implements OnShare
         if (getArguments() != null && getArguments().containsKey(Constants.ARG_COIN_ID)) {
             type = CoinID.typeFromId(getArguments().getString(Constants.ARG_COIN_ID));
         } else {
-            type = BitcoinMain.get();
+            type = SuqaMain.get();
         }
         contentUri = ExchangeRatesProvider.contentUriToLocal(context.getPackageName(),
                 type.getSymbol(), false);

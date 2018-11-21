@@ -18,8 +18,8 @@ package com.coinomi.core.uri;
  * 
  */
 
-import com.coinomi.core.coins.BitcoinMain;
-import com.coinomi.core.coins.BitcoinTest;
+import com.coinomi.core.coins.SuqaMain;
+import com.coinomi.core.coins.SuqaTest;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.DashMain;
 import com.coinomi.core.coins.DogecoinMain;
@@ -47,8 +47,8 @@ import static org.junit.Assert.fail;
 
 public class CoinURITest {
     private CoinURI testObject = null;
-    final CoinType BTC = BitcoinMain.get();
-    final CoinType BTC_TEST = BitcoinTest.get();
+    final CoinType BTC = SuqaMain.get();
+    final CoinType BTC_TEST = SuqaTest.get();
     final CoinType LTC = LitecoinMain.get();
     final CoinType DOGE = DogecoinMain.get();
     final CoinType PPC = PeercoinMain.get();
@@ -62,7 +62,7 @@ public class CoinURITest {
 
     @Test
     public void testConvertToCoinURI() throws Exception {
-        BitAddress goodAddress = BitAddress.from(BitcoinMain.get(), MAINNET_GOOD_ADDRESS);
+        BitAddress goodAddress = BitAddress.from(SuqaMain.get(), MAINNET_GOOD_ADDRESS);
         
         // simple example
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage", CoinURI.convertToCoinURI(goodAddress, BTC.value("12.34"), "Hello", "AMessage"));
@@ -99,7 +99,7 @@ public class CoinURITest {
 
     @Test
     public void testAltChainsConvertToCoinURI() throws Exception {
-        byte[] hash160 = BitAddress.from(BitcoinMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
+        byte[] hash160 = BitAddress.from(SuqaMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
         String goodAddressStr;
         BitAddress goodAddress;
 
@@ -134,9 +134,9 @@ public class CoinURITest {
 
     @Test
     public void testSharedCoinURI() throws Exception {
-        byte[] hash160 = BitAddress.from(BitcoinMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
+        byte[] hash160 = BitAddress.from(SuqaMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
 
-        // Bitcoin and Bitcoin Testnet
+        // Suqa and Suqa Testnet
         BitAddress address = BitAddress.from(BTC, hash160);
         testObject = new CoinURI(BTC.getUriScheme() + ":" + address);
         assertTrue(testObject.hasType());
@@ -162,7 +162,7 @@ public class CoinURITest {
 
     @Test
     public void testAltChainsGoodAmount() throws Exception {
-        byte[] hash160 = BitAddress.from(BitcoinMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
+        byte[] hash160 = BitAddress.from(SuqaMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
         String goodAddressStr;
         BitAddress goodAddress;
 
@@ -193,7 +193,7 @@ public class CoinURITest {
 
     @Test
     public void testGood_Simple() throws CoinURIParseException {
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS);
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS);
         assertNotNull(testObject);
         assertNull("Unexpected amount", testObject.getAmount());
         assertNull("Unexpected label", testObject.getLabel());
@@ -207,8 +207,8 @@ public class CoinURITest {
     @Test
     public void testBad_Scheme() {
         try {
-            testObject = new CoinURI(BitcoinMain.get(), "blimpcoin:" + MAINNET_GOOD_ADDRESS);
-            fail("Expecting BitcoinURIParseException");
+            testObject = new CoinURI(SuqaMain.get(), "blimpcoin:" + MAINNET_GOOD_ADDRESS);
+            fail("Expecting SuqaURIParseException");
         } catch (CoinURIParseException e) {
         }
     }
@@ -220,14 +220,14 @@ public class CoinURITest {
     public void testBad_BadSyntax() {
         // Various illegal characters
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + "|" + MAINNET_GOOD_ADDRESS);
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + "|" + MAINNET_GOOD_ADDRESS);
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
         }
 
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS + "\\");
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS + "\\");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
@@ -235,7 +235,7 @@ public class CoinURITest {
 
         // Separator without field
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":");
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
@@ -248,7 +248,7 @@ public class CoinURITest {
     @Test
     public void testBad_Address() {
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme());
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme());
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
         }
@@ -260,7 +260,7 @@ public class CoinURITest {
     @Test
     public void testBad_IncorrectAddressType() {
         try {
-            testObject = new CoinURI(BitcoinTest.get(), BitcoinTest.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS);
+            testObject = new CoinURI(SuqaTest.get(), SuqaTest.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS);
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad address"));
@@ -276,17 +276,17 @@ public class CoinURITest {
     @Test
     public void testGood_Amount() throws CoinURIParseException {
         // Test the decimal parsing
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210.12345678");
         assertEquals(654321012345678L, testObject.getAmount().value);
 
         // Test the decimal parsing
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=.12345678");
         assertEquals(12345678L, testObject.getAmount().value);
 
         // Test the integer parsing
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210");
         assertEquals(654321000000000L, testObject.getAmount().value);
     }
@@ -299,7 +299,7 @@ public class CoinURITest {
      */
     @Test
     public void testGood_Label() throws CoinURIParseException {
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?label=Hello%20World");
         assertEquals("Hello World", testObject.getLabel());
     }
@@ -315,7 +315,7 @@ public class CoinURITest {
     public void testGood_LabelWithAmpersandAndPlus() throws Exception {
         String testString = "Hello Earth & Mars + Venus";
         String encodedLabel = CoinURI.encodeURLString(testString);
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS + "?label="
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS + "?label="
                 + encodedLabel);
         assertEquals(testString, testObject.getLabel());
     }
@@ -332,7 +332,7 @@ public class CoinURITest {
         // Moscow in Russian in Cyrillic
         String moscowString = "\u041c\u043e\u0441\u043a\u0432\u0430";
         String encodedLabel = CoinURI.encodeURLString(moscowString); 
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS + "?label="
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS + "?label="
                 + encodedLabel);
         assertEquals(moscowString, testObject.getLabel());
     }
@@ -345,7 +345,7 @@ public class CoinURITest {
      */
     @Test
     public void testGood_Message() throws CoinURIParseException {
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?message=Hello%20World");
         assertEquals("Hello World", testObject.getMessage());
     }
@@ -358,7 +358,7 @@ public class CoinURITest {
      */
     @Test
     public void testGood_Combinations() throws CoinURIParseException {
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210&label=Hello%20World&message=Be%20well");
         assertEquals(
                 "CoinURI['address'='1KzTSfqjF2iKCduwz59nv2uqh1W2JsTxZH','amount'='6543210BTC','label'='Hello World','message'='Be well']",
@@ -375,7 +375,7 @@ public class CoinURITest {
     public void testBad_Amount() throws CoinURIParseException {
         // Missing
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                     + "?amount=");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
@@ -384,7 +384,7 @@ public class CoinURITest {
 
         // Non-decimal (BIP 21)
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                     + "?amount=12X4");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
@@ -394,13 +394,13 @@ public class CoinURITest {
 
     @Test
     public void testEmpty_Label() throws CoinURIParseException {
-        assertNull(new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        assertNull(new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?label=").getLabel());
     }
 
     @Test
     public void testEmpty_Message() throws CoinURIParseException {
-        assertNull(new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        assertNull(new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?message=").getMessage());
     }
 
@@ -413,7 +413,7 @@ public class CoinURITest {
     @Test
     public void testBad_Duplicated() throws CoinURIParseException {
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                     + "?address=aardvark");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
@@ -423,7 +423,7 @@ public class CoinURITest {
 
     @Test
     public void testGood_ManyEquals() throws CoinURIParseException {
-        assertEquals("aardvark=zebra", new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":"
+        assertEquals("aardvark=zebra", new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":"
                 + MAINNET_GOOD_ADDRESS + "?label=aardvark=zebra").getLabel());
     }
 
@@ -436,7 +436,7 @@ public class CoinURITest {
     @Test
     public void testBad_TooManyQuestionMarks() throws CoinURIParseException {
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                     + "?label=aardvark?message=zebra");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
@@ -453,7 +453,7 @@ public class CoinURITest {
     @Test
     public void testUnknown() throws CoinURIParseException {
         // Unknown not required field
-        testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?aardvark=true");
         assertEquals("CoinURI['address'='1KzTSfqjF2iKCduwz59nv2uqh1W2JsTxZH','aardvark'='true']", testObject.toString());
 
@@ -461,7 +461,7 @@ public class CoinURITest {
 
         // Unknown not required field (isolated)
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                     + "?aardvark");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
@@ -470,7 +470,7 @@ public class CoinURITest {
 
         // Unknown and required field
         try {
-            testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                     + "?req-aardvark=true");
             fail("Expecting CoinURIParseException");
         } catch (CoinURIParseException e) {
@@ -489,19 +489,19 @@ public class CoinURITest {
 
     @Test(expected = CoinURIParseException.class)
     public void testBad_AmountTooPrecise() throws CoinURIParseException {
-        new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=0.123456789");
     }
 
     @Test(expected = CoinURIParseException.class)
     public void testBad_NegativeAmount() throws CoinURIParseException {
-        new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=-1");
     }
 
 //    @Test(expected = CoinURIParseException.class)
 //    public void testBad_TooLargeAmount() throws CoinURIParseException {
-//        new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+//        new CoinURI(SuqaMain.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
 //                + "?amount=100000000");
 //    }
 
@@ -548,7 +548,7 @@ public class CoinURITest {
                 uri.getAddressRequestUriResponse(MAINNET_GOOD_ADDRESS).toString());
 
 
-        byte[] hash160 = BitAddress.from(BitcoinMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
+        byte[] hash160 = BitAddress.from(SuqaMain.get(), MAINNET_GOOD_ADDRESS).getHash160();
         String goodAddressStr;
 
         // Testnet
@@ -584,7 +584,7 @@ public class CoinURITest {
 
     @Test(expected = CoinURIParseException.class)
     public void testAddressRequestBadFormat() throws Exception {
-        new CoinURI(BitcoinTest.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
+        new CoinURI(SuqaTest.get(), SuqaMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS
                 + "?req-addressrequest=https%3A%2F%2Fcoinomi.com");
     }
 }

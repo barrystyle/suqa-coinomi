@@ -31,7 +31,7 @@
         android:layout_marginEnd="@dimen/half_standard_margin"
         android:layout_marginRight="@dimen/half_standard_margin"
         android:layout_weight="1"
-        tools:text="Bitcoin" />
+        tools:text="Suqa" />
 
     <com.coinomi.wallet.ui.widget.Amount
         android:id="@+id/amount"

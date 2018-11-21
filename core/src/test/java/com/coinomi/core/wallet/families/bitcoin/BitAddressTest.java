@@ -1,6 +1,6 @@
 package com.coinomi.core.wallet.families.bitcoin;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.LitecoinMain;
 import com.coinomi.core.exceptions.AddressMalformedException;
@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
  * @author John L. Jegutanis
  */
 public class BitAddressTest {
-    CoinType BTC = BitcoinMain.get();
+    CoinType BTC = SuqaMain.get();
     CoinType LTC = LitecoinMain.get();
 
     ECKey pubKey = ECKey.fromPublicOnly(Hex.decode("037a305e15ddef015bb64d147eb479d64c9f3c85d9bf6f3f8c39252e29e11c0db8"));

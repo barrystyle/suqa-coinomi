@@ -34,7 +34,7 @@ import org.junit.Test;
 import java.math.BigDecimal;
 
 public class ValueTest {
-    final CoinType BTC = BitcoinMain.get();
+    final CoinType BTC = SuqaMain.get();
     final CoinType LTC = LitecoinMain.get();
     final CoinType PPC = PeercoinMain.get();
     final CoinType NBT = NuBitsMain.get();
@@ -47,7 +47,7 @@ public class ValueTest {
         assertEquals(13370000, BTC.value("0.1337").value);
         assertEquals(13370000, BTC.value(".1337").value);
 
-        // Bitcoin family
+        // Suqa family
         assertEquals(133700000, BTC.value("1.337").value);
         assertEquals(133700, BTC.value("0.001337").value);
 
@@ -61,7 +61,7 @@ public class ValueTest {
     }
 
     @Test(expected = ArithmeticException.class)
-    public void parseCoinErrorBitcoin() {
+    public void parseCoinErrorSuqa() {
         BTC.value("3.141592653589793");
     }
 
@@ -157,9 +157,9 @@ public class ValueTest {
 
     @Test
     public void testEquals() {
-        Value btcSatoshi = Value.valueOf(BitcoinMain.get(), 1);
-        Value btcSatoshi2 = Value.valueOf(BitcoinMain.get(), 1);
-        Value btcValue = Value.parse(BitcoinMain.get(), "3.14159");
+        Value btcSatoshi = Value.valueOf(SuqaMain.get(), 1);
+        Value btcSatoshi2 = Value.valueOf(SuqaMain.get(), 1);
+        Value btcValue = Value.parse(SuqaMain.get(), "3.14159");
         Value ltcSatoshi = Value.valueOf(LitecoinMain.get(), 1);
         Value ppcValue = Value.parse(PeercoinMain.get(), "3.14159");
 

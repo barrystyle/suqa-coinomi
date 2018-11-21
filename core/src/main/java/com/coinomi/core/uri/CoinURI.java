@@ -48,7 +48,7 @@ import static com.coinomi.core.Preconditions.checkNotNull;
 import static com.coinomi.core.Preconditions.checkState;
 
 /**
- * <p>Provides a standard implementation of a Bitcoin URI with support for the following:</p>
+ * <p>Provides a standard implementation of a Suqa URI with support for the following:</p>
  *
  * <ul>
  * <li>URLEncoded URIs (as passed in by IE on the command line)</li>
@@ -272,10 +272,10 @@ public class CoinURI implements Serializable {
         for (String nameValuePairToken : nameValuePairTokens) {
             final int sepIndex = nameValuePairToken.indexOf('=');
             if (sepIndex == -1)
-                throw new CoinURIParseException("Malformed Bitcoin URI - no separator in '" +
+                throw new CoinURIParseException("Malformed Suqa URI - no separator in '" +
                         nameValuePairToken + "'");
             if (sepIndex == 0)
-                throw new CoinURIParseException("Malformed Bitcoin URI - empty name '" +
+                throw new CoinURIParseException("Malformed Suqa URI - empty name '" +
                         nameValuePairToken + "'");
             final String nameToken = nameValuePairToken.substring(0, sepIndex).toLowerCase(Locale.ENGLISH);
             final String valueToken = nameValuePairToken.substring(sepIndex + 1);
@@ -405,7 +405,7 @@ public class CoinURI implements Serializable {
     }
 
     /**
-     * The Bitcoin Address from the URI, if one was present. It's possible to have Bitcoin URI's with no address if a
+     * The Suqa Address from the URI, if one was present. It's possible to have Suqa URI's with no address if a
      * r= payment protocol parameter is specified, though this form is not recommended as older wallets can't understand
      * it.
      */

@@ -39,7 +39,7 @@ import java.io.Serializable;
 public class SendRequest<T extends AbstractTransaction> implements Serializable {
 
     /**
-     * The blockchain network (Bitcoin, Dogecoin,..) that this request is going to transact
+     * The blockchain network (Suqa, Dogecoin,..) that this request is going to transact
      */
     public CoinType type;
 
@@ -67,7 +67,7 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
     /**
      * <p>A transaction can have a fee attached, which is defined as the difference between the input values
      * and output values. Any value taken in that is not provided to an output can be claimed by a miner. This
-     * is how mining is incentivized in later years of the Bitcoin system when inflation drops. It also provides
+     * is how mining is incentivized in later years of the Suqa system when inflation drops. It also provides
      * a way for people to prioritize their transactions over others and is used as a way to make denial of service
      * attacks expensive.</p>
      *
@@ -83,7 +83,7 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
     /**
      * <p>A transaction can have a fee attached, which is defined as the difference between the input values
      * and output values. Any value taken in that is not provided to an output can be claimed by a miner. This
-     * is how mining is incentivized in later years of the Bitcoin system when inflation drops. It also provides
+     * is how mining is incentivized in later years of the Suqa system when inflation drops. It also provides
      * a way for people to prioritize their transactions over others and is used as a way to make denial of service
      * attacks expensive.</p>
      *
@@ -161,7 +161,7 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
     /**
      * Attaches a message to the transaction. There is no guarantee that the coin supports messages
      * or that the recipient will ultimately get them or if the message will be recorded to on the
-     * blockchain i.e. Bitcoin, Litecoin messages could be stored on a public server
+     * blockchain i.e. Suqa, Litecoin messages could be stored on a public server
      */
     public TxMessage txMessage;
 

@@ -1,6 +1,6 @@
 package com.coinomi.core.exchange.shapeshift;
 
-import com.coinomi.core.coins.BitcoinMain;
+import com.coinomi.core.coins.SuqaMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.DogecoinMain;
 import com.coinomi.core.coins.FiatValue;
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
  * @author John L. Jegutanis
  */
 public class ExchangeRateTest {
-    final CoinType BTC = BitcoinMain.get();
+    final CoinType BTC = SuqaMain.get();
     final CoinType DOGE = DogecoinMain.get();
     final CoinType NBT = NuBitsMain.get();
 

@@ -2301,7 +2301,7 @@ public final class Protos {
    *
    * <pre>
    **
-   * A key used to control Bitcoin spending.
+   * A key used to control Suqa spending.
    * Either the private key, the public key or both may be present.  It is recommended that
    * if the private key is provided that the public key is provided too because deriving it is slow.
    * If only the public key is provided, the key can only be used to watch the blockchain and verify
@@ -2940,7 +2940,7 @@ public final class Protos {
      *
      * <pre>
      **
-     * A key used to control Bitcoin spending.
+     * A key used to control Suqa spending.
      * Either the private key, the public key or both may be present.  It is recommended that
      * if the private key is provided that the public key is provided too because deriving it is slow.
      * If only the public key is provided, the key can only be used to watch the blockchain and verify

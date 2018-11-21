@@ -87,7 +87,7 @@
     <string name="restore_error">Non è stato possibile verificare la tua frase di recupero. %1$s</string>
     <string name="extra_entropy">Extra entropia</string>
     <!-- Wallet activity -->
-    <string name="test_wallet_message">Questo è un portafoglio di prova, dove puoi inviare e ricevere Bitcoins, Litecoin e Dogecoins di prova.\n\nSe vuoi usare il portafoglio con monete reali per favore vai a:<b>Impostazioni &gt; Ripristina portafoglio &gt; Crea un nuovo portafoglio</b>.</string>
+    <string name="test_wallet_message">Questo è un portafoglio di prova, dove puoi inviare e ricevere Suqas, Litecoin e Dogecoins di prova.\n\nSe vuoi usare il portafoglio con monete reali per favore vai a:<b>Impostazioni &gt; Ripristina portafoglio &gt; Crea un nuovo portafoglio</b>.</string>
     <string name="wallet_update_title">La nuova versione è disponibile</string>
     <string name="wallet_update_message">Una nuova versione di Coinomi è disponibile, contiene  nuove caratteristiche e correzioni.</string>
     <string name="pay_with">Invia con</string>
@@ -115,7 +115,7 @@
     <!-- Send fragment -->
     <string name="send_coins_fragment_receiving_address_label">Paga a</string>
     <string name="send_coins_fragment_receiving_address_tip">inserisci nome o indirizzo</string>
-    <string name="send_coins_fragment_receiving_address_error">Indirizzo Bitcoin non valido!</string>
+    <string name="send_coins_fragment_receiving_address_error">Indirizzo Suqa non valido!</string>
     <string name="send_coins_fragment_amount_label">Importo da pagare</string>
     <string name="send_coins_fragment_button_send">Invia</string>
     <string name="send_coins_fragment_button_back">Indietro</string>
@@ -176,7 +176,7 @@
     <string name="about_licence">Un progetto open source\nhttps://github.com/Coinomi/coinomi-android\nSource code con licenza GNU General Public License 3</string>
     <string name="about_credits_nubits">Server infrastructure donated by NuBits - The World\'s First Stable Digital Currency\nhttps://nubits.com/</string>
     <string name="about_credits_translations">Traduzione fornita da:</string>
-    <string name="about_credits_bitcoinj">Usa la biblioteca Bitcoinj\nhttp://bitcoinj.github.io/</string>
+    <string name="about_credits_bitcoinj">Usa la biblioteca Suqaj\nhttp://bitcoinj.github.io/</string>
     <string name="about_credits_electrum">Usa il server software Electrum \nhttps://electrum.org/</string>
     <string name="about_credits_schildbach">Ispirato da Andreas Schildbach\nhttps://github.com/schildbach/bitcoin-wallet/</string>
     <string name="about_credits_zxing">Funzionalità QR-code da ZXing\nhttps://github.com/zxing/zxing</string>
@@ -278,7 +278,7 @@
     <string name="exchange_history_empty">Non sono avvenuti scambi</string>
     <!-- ShapeShift -->
     <string name="about_shapeshift_title">Riguardo ShapeShift.io</string>
-    <string name="about_shapeshift_message">"ShapeShift.io è un cambio istantaneo di altcoin che fornisce la conversione di Botcoin e altcoin. La piattaforma (disponibile sia sul web che su API) rappresenta la strada più veloce ed efficiente per convertire Bitcoin e decine di altcoin all'interno dell'ecosistema Bitcoin. Non è richiesto un account. "</string>
+    <string name="about_shapeshift_message">"ShapeShift.io è un cambio istantaneo di altcoin che fornisce la conversione di Botcoin e altcoin. La piattaforma (disponibile sia sul web che su API) rappresenta la strada più veloce ed efficiente per convertire Suqa e decine di altcoin all'interno dell'ecosistema Suqa. Non è richiesto un account. "</string>
     <!-- Sign Message -->
     <string name="title_activity_sign_verify_message">Firma/verifica messaggio</string>
     <string name="signing_info">Puoi firmare o verificare un messaggio usando un indirizzo.</string>

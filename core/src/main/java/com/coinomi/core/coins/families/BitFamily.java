@@ -10,7 +10,7 @@ import org.bitcoinj.core.AddressFormatException;
 /**
  * @author John L. Jegutanis
  *
- * This is the classical Bitcoin family that includes Litecoin, Dogecoin, Dash, etc
+ * This is the classical Suqa family that includes Litecoin, Dogecoin, Dash, etc
  */
 public abstract class BitFamily extends CoinType {
     {
