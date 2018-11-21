@@ -185,7 +185,7 @@ message TransactionConfidence {
 
     // If type == BUILDING then this is the depth of the transaction in the blockchain.
     // Zero confirmations: depth = 0, one confirmation: depth = 1 etc.
-    optional int32 depth = 4;
+    optional int32 depth = 6;
 
     repeated PeerAddress broadcast_by = 5;
 
