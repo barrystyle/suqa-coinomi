@@ -6,6 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
+
         classpath 'com.android.tools.build:gradle:2.3.3'
 //        classpath 'org.robolectric:robolectric-gradle-plugin:0.11.+'
 
@@ -21,6 +22,6 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}
