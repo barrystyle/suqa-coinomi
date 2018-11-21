@@ -9,22 +9,22 @@ public class SuqaMain extends BitFamily {
     private SuqaMain() {
         id = "bitcoin.main";
 
-        addressHeader = 0;
+        addressHeader = 63;
         p2shHeader = 5;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
         spendableCoinbaseDepth = 100;
-        dumpedPrivateKeyHeader = 128;
+        dumpedPrivateKeyHeader = 191;
 
         name = "Suqa";
-        symbol = "BTC";
-        uriScheme = "bitcoin";
+        symbol = "SUQA";
+        uriScheme = "suqa";
         bip44Index = 0;
         unitExponent = 8;
-        feeValue = value(12000);
-        minNonDust = value(5460);
-        softDustLimit = value(1000000); // 0.01 BTC
+        feeValue = value(1000);
+        minNonDust = value(1000);
+        softDustLimit = value(1000000); // 0.01 SUQA
         softDustPolicy = SoftDustPolicy.AT_LEAST_BASE_FEE_IF_SOFT_DUST_TXO_PRESENT;
-        signedMessageHeader = toBytes("Suqa Signed Message:\n");
+        signedMessageHeader = toBytes("Bitcoin Signed Message:\n");
     }
 
     private static SuqaMain instance = new SuqaMain();

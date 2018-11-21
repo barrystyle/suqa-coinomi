@@ -129,10 +129,10 @@ public class TrimmedTransaction extends Transaction {
         return trimmedOutputs == null;
     }
 
-    @Override
-    public byte[] unsafeSuqaSerialize() {
-        throw new IllegalArgumentException("Cannot serialize trimmed transaction");
-    }
+    //@Override
+    //public byte[] unsafeSuqaSerialize() {
+    //    throw new IllegalArgumentException("Cannot serialize trimmed transaction");
+    //}
 
     @Override
     protected void bitcoinSerializeToStream(OutputStream stream, boolean includeExtensions) throws IOException {
